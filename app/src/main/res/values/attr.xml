@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义输入框的属性-->
+     <declare-styleable name="EditStyle">
+        <attr name="deleteImage"  format="reference"/>
+        <attr name="textColor"    format="reference|color"/>
+        <attr name="textSize"     format="dimension"/>
+        <attr name="isShowLine"   format="boolean"/>
+     </declare-styleable>
+</resources>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_100"
+            android:contentDescription="TODO"
+            android:paddingLeft="@dimen/dimen_25"
+            android:paddingRight="@dimen/dimen_30"
+            android:src="@drawable/back"
+            android:tint="#323232"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_85"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/logo_wangdianguanjia" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_logo"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="网点管家"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/sp_18"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dimen_30"
+                android:layout_marginTop="@dimen/dimen_50"
+                android:layout_marginRight="@dimen/dimen_30"
+                android:orientation="vertical">
+
+                <zuai.tan.uicustom.ui.widget.DeleteContent_Edit
+                    android:id="@+id/et_account"
+                    style="@style/LoginEditTextStyle"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+                    android:hint="请输入工号"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    app:isShowLine="true"
+                    app:deleteImage="@drawable/delete">
+
+                </zuai.tan.uicustom.ui.widget.DeleteContent_Edit>
+
+                <zuai.tan.uicustom.ui.widget.DeleteContent_Edit
+                    android:id="@+id/et_mobile"
+                    style="@style/LoginEditTextStyle"
+                    android:hint="请输入手机号"
+                    android:inputType="number"
+                    app:isShowLine="true"
+                    app:deleteImage="@drawable/delete" />
+
+                <LinearLayout
+                    android:id="@+id/ll_image_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@color/colorWhite"
+                    android:divider="@drawable/divider_line_dw"
+                    android:orientation="vertical"
+                    android:showDividers="end"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_50"
+                        android:background="@color/colorWhite"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <zuai.tan.uicustom.ui.widget.DeleteContent_Edit
+                            android:id="@+id/et_image_code"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="请输入验证码"
+                            android:inputType="number"
+                            android:textColor="@color/colorTextHint"
+                            android:textSize="@dimen/sp_15"
+                            app:deleteImage="@drawable/delete" />
+
+                        <ImageView
+                            android:id="@+id/iv_image_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:layout_marginRight="@dimen/dimen_5" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_number_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:divider="@drawable/divider_line_dw"
+                    android:orientation="vertical"
+                    android:showDividers="end">
+
+                    <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite">
+
+                    <TextView
+                        android:id="@+id/tv_number_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/login_btn_bg3"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/dimen_12"
+                        android:paddingTop="@dimen/dimen_5"
+                        android:paddingRight="@dimen/dimen_12"
+                        android:paddingBottom="@dimen/dimen_5"
+                        android:text="获取验证码"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/sp_15"
+                        android:visibility="visible" />
+
+                    <zuai.tan.uicustom.ui.widget.DeleteContent_Edit
+                        android:id="@+id/et_number_code"
+                        style="@style/LoginEditTextStyle"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dimen_15"
+                        android:layout_toLeftOf="@id/tv_number_code"
+                        android:gravity="left"
+                        android:hint="请输入验证码"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        app:deleteImage="@drawable/delete" />
+                </RelativeLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_error"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text=""
+                    android:textColor="@android:color/holo_red_light"
+                    android:textSize="@dimen/sp_12" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_login_submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alpha="0.5"
+                        android:background="@drawable/login_btn_bg2"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:text="登  录"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/sp_18" />
+
+                    <Button
+                        android:id="@+id/btn_without_code_submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/dimen_15"
+                        android:background="@drawable/login_btn_bg3"
+                        android:gravity="center"
+                        android:text="免密登录"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/sp_18"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</RelativeLayout>
